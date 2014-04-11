@@ -42,7 +42,9 @@ while flipCoin():
 	score += 1
 	print("Your score is: ", score, sep="")
 print("Game over.\n")
-name = input("What is your name: ")
+name = input("What is your name: ").strip()
+if name == "":
+	name = "Dave 9000"
 if state[0] < score:
 	state[0] = score
 	state[1] = name
